@@ -1,0 +1,388 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		222EB7BC1796E16D001657C5 /* DIEqualizerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 222EB7BB1796E16D001657C5 /* DIEqualizerViewController.m */; };
+		222EB7C11796E1F9001657C5 /* IKGraphicEqualizerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 222EB7C01796E1F9001657C5 /* IKGraphicEqualizerView.m */; };
+		222EB7C5179703C9001657C5 /* IKMusicPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 222EB7C4179703C9001657C5 /* IKMusicPlayer.m */; };
+		22460F8817998CA1000DFA08 /* test.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 22460F8617998CA1000DFA08 /* test.mp3 */; };
+		22460F8C1799973A000DFA08 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22460F8B1799973A000DFA08 /* QuartzCore.framework */; };
+		22498E2E178ED43E00967738 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22498E2D178ED43E00967738 /* UIKit.framework */; };
+		22498E30178ED43E00967738 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22498E2F178ED43E00967738 /* Foundation.framework */; };
+		22498E32178ED43E00967738 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22498E31178ED43E00967738 /* CoreGraphics.framework */; };
+		22498E38178ED43E00967738 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 22498E36178ED43E00967738 /* InfoPlist.strings */; };
+		22498E3A178ED43E00967738 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22498E39178ED43E00967738 /* main.m */; };
+		22498E3E178ED43E00967738 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22498E3D178ED43E00967738 /* AppDelegate.m */; };
+		22498E40178ED43E00967738 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 22498E3F178ED43E00967738 /* Default.png */; };
+		22498E42178ED43E00967738 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22498E41178ED43E00967738 /* Default@2x.png */; };
+		22498E44178ED43E00967738 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22498E43178ED43E00967738 /* Default-568h@2x.png */; };
+		22498E47178ED43E00967738 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22498E45178ED43E00967738 /* MainStoryboard.storyboard */; };
+		22498E51178ED74900967738 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22498E50178ED74900967738 /* Accelerate.framework */; };
+		22498E59178F022A00967738 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22498E58178F022A00967738 /* AVFoundation.framework */; };
+		22A221F01792D2F4003087B0 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22A221EF1792D2F4003087B0 /* CoreMedia.framework */; };
+		22A221F417930581003087B0 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22A221F317930581003087B0 /* AudioToolbox.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		222EB7BA1796E16D001657C5 /* DIEqualizerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIEqualizerViewController.h; sourceTree = "<group>"; };
+		222EB7BB1796E16D001657C5 /* DIEqualizerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIEqualizerViewController.m; sourceTree = "<group>"; };
+		222EB7BF1796E1F9001657C5 /* IKGraphicEqualizerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKGraphicEqualizerView.h; sourceTree = "<group>"; };
+		222EB7C01796E1F9001657C5 /* IKGraphicEqualizerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKGraphicEqualizerView.m; sourceTree = "<group>"; };
+		222EB7C3179703C9001657C5 /* IKMusicPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKMusicPlayer.h; sourceTree = "<group>"; };
+		222EB7C4179703C9001657C5 /* IKMusicPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKMusicPlayer.m; sourceTree = "<group>"; };
+		22460F8617998CA1000DFA08 /* test.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = test.mp3; sourceTree = "<group>"; };
+		22460F8B1799973A000DFA08 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		22498E2A178ED43E00967738 /* DI_Equalizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DI_Equalizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		22498E2D178ED43E00967738 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		22498E2F178ED43E00967738 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		22498E31178ED43E00967738 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		22498E35178ED43E00967738 /* DI_Equalizer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DI_Equalizer-Info.plist"; sourceTree = "<group>"; };
+		22498E37178ED43E00967738 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		22498E39178ED43E00967738 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		22498E3B178ED43E00967738 /* DI_Equalizer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DI_Equalizer-Prefix.pch"; sourceTree = "<group>"; };
+		22498E3C178ED43E00967738 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		22498E3D178ED43E00967738 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		22498E3F178ED43E00967738 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		22498E41178ED43E00967738 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		22498E43178ED43E00967738 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		22498E46178ED43E00967738 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		22498E50178ED74900967738 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		22498E58178F022A00967738 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		22A221EF1792D2F4003087B0 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		22A221F317930581003087B0 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		22498E27178ED43E00967738 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22460F8C1799973A000DFA08 /* QuartzCore.framework in Frameworks */,
+				22A221F417930581003087B0 /* AudioToolbox.framework in Frameworks */,
+				22A221F01792D2F4003087B0 /* CoreMedia.framework in Frameworks */,
+				22498E59178F022A00967738 /* AVFoundation.framework in Frameworks */,
+				22498E51178ED74900967738 /* Accelerate.framework in Frameworks */,
+				22498E2E178ED43E00967738 /* UIKit.framework in Frameworks */,
+				22498E30178ED43E00967738 /* Foundation.framework in Frameworks */,
+				22498E32178ED43E00967738 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		222EB7BD1796E1DE001657C5 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				222EB7C2179703B7001657C5 /* IKMusicPlayer */,
+				222EB7BE1796E1DE001657C5 /* IKGraphicEqualizerView */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		222EB7BE1796E1DE001657C5 /* IKGraphicEqualizerView */ = {
+			isa = PBXGroup;
+			children = (
+				222EB7BF1796E1F9001657C5 /* IKGraphicEqualizerView.h */,
+				222EB7C01796E1F9001657C5 /* IKGraphicEqualizerView.m */,
+			);
+			path = IKGraphicEqualizerView;
+			sourceTree = "<group>";
+		};
+		222EB7C2179703B7001657C5 /* IKMusicPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				222EB7C3179703C9001657C5 /* IKMusicPlayer.h */,
+				222EB7C4179703C9001657C5 /* IKMusicPlayer.m */,
+			);
+			path = IKMusicPlayer;
+			sourceTree = "<group>";
+		};
+		22460F8317998CA1000DFA08 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				22460F8417998CA1000DFA08 /* Sound */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		22460F8417998CA1000DFA08 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				22460F8617998CA1000DFA08 /* test.mp3 */,
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
+		22498E21178ED43E00967738 = {
+			isa = PBXGroup;
+			children = (
+				22498E33178ED43E00967738 /* DI_Equalizer */,
+				22498E2C178ED43E00967738 /* Frameworks */,
+				22498E2B178ED43E00967738 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		22498E2B178ED43E00967738 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				22498E2A178ED43E00967738 /* DI_Equalizer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		22498E2C178ED43E00967738 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				22460F8B1799973A000DFA08 /* QuartzCore.framework */,
+				22A221F317930581003087B0 /* AudioToolbox.framework */,
+				22A221EF1792D2F4003087B0 /* CoreMedia.framework */,
+				22498E58178F022A00967738 /* AVFoundation.framework */,
+				22498E50178ED74900967738 /* Accelerate.framework */,
+				22498E2D178ED43E00967738 /* UIKit.framework */,
+				22498E2F178ED43E00967738 /* Foundation.framework */,
+				22498E31178ED43E00967738 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		22498E33178ED43E00967738 /* DI_Equalizer */ = {
+			isa = PBXGroup;
+			children = (
+				22460F8317998CA1000DFA08 /* Resources */,
+				222EB7BD1796E1DE001657C5 /* Libraries */,
+				22498E3C178ED43E00967738 /* AppDelegate.h */,
+				22498E3D178ED43E00967738 /* AppDelegate.m */,
+				22498E45178ED43E00967738 /* MainStoryboard.storyboard */,
+				222EB7BA1796E16D001657C5 /* DIEqualizerViewController.h */,
+				222EB7BB1796E16D001657C5 /* DIEqualizerViewController.m */,
+				22498E34178ED43E00967738 /* Supporting Files */,
+			);
+			path = DI_Equalizer;
+			sourceTree = "<group>";
+		};
+		22498E34178ED43E00967738 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				22498E35178ED43E00967738 /* DI_Equalizer-Info.plist */,
+				22498E36178ED43E00967738 /* InfoPlist.strings */,
+				22498E39178ED43E00967738 /* main.m */,
+				22498E3B178ED43E00967738 /* DI_Equalizer-Prefix.pch */,
+				22498E3F178ED43E00967738 /* Default.png */,
+				22498E41178ED43E00967738 /* Default@2x.png */,
+				22498E43178ED43E00967738 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		22498E29178ED43E00967738 /* DI_Equalizer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22498E4D178ED43E00967738 /* Build configuration list for PBXNativeTarget "DI_Equalizer" */;
+			buildPhases = (
+				22498E26178ED43E00967738 /* Sources */,
+				22498E27178ED43E00967738 /* Frameworks */,
+				22498E28178ED43E00967738 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DI_Equalizer;
+			productName = DI_Equalizer;
+			productReference = 22498E2A178ED43E00967738 /* DI_Equalizer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		22498E22178ED43E00967738 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Igor Kamenev";
+			};
+			buildConfigurationList = 22498E25178ED43E00967738 /* Build configuration list for PBXProject "DI_Equalizer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 22498E21178ED43E00967738;
+			productRefGroup = 22498E2B178ED43E00967738 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				22498E29178ED43E00967738 /* DI_Equalizer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		22498E28178ED43E00967738 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22498E38178ED43E00967738 /* InfoPlist.strings in Resources */,
+				22498E40178ED43E00967738 /* Default.png in Resources */,
+				22498E42178ED43E00967738 /* Default@2x.png in Resources */,
+				22498E44178ED43E00967738 /* Default-568h@2x.png in Resources */,
+				22498E47178ED43E00967738 /* MainStoryboard.storyboard in Resources */,
+				22460F8817998CA1000DFA08 /* test.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		22498E26178ED43E00967738 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22498E3A178ED43E00967738 /* main.m in Sources */,
+				22498E3E178ED43E00967738 /* AppDelegate.m in Sources */,
+				222EB7BC1796E16D001657C5 /* DIEqualizerViewController.m in Sources */,
+				222EB7C11796E1F9001657C5 /* IKGraphicEqualizerView.m in Sources */,
+				222EB7C5179703C9001657C5 /* IKMusicPlayer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		22498E36178ED43E00967738 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22498E37178ED43E00967738 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		22498E45178ED43E00967738 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22498E46178ED43E00967738 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		22498E4B178ED43E00967738 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Igor Kamenev (V66J298ES4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Igor Kamenev (V66J298ES4)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "07F1ACA3-59B2-4996-8F8F-FDEB3672F82C";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "07F1ACA3-59B2-4996-8F8F-FDEB3672F82C";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		22498E4C178ED43E00967738 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Igor Kamenev (V66J298ES4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Igor Kamenev (V66J298ES4)";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "07F1ACA3-59B2-4996-8F8F-FDEB3672F82C";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "07F1ACA3-59B2-4996-8F8F-FDEB3672F82C";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		22498E4E178ED43E00967738 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DI_Equalizer/DI_Equalizer-Prefix.pch";
+				INFOPLIST_FILE = "DI_Equalizer/DI_Equalizer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		22498E4F178ED43E00967738 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DI_Equalizer/DI_Equalizer-Prefix.pch";
+				INFOPLIST_FILE = "DI_Equalizer/DI_Equalizer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		22498E25178ED43E00967738 /* Build configuration list for PBXProject "DI_Equalizer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22498E4B178ED43E00967738 /* Debug */,
+				22498E4C178ED43E00967738 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22498E4D178ED43E00967738 /* Build configuration list for PBXNativeTarget "DI_Equalizer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22498E4E178ED43E00967738 /* Debug */,
+				22498E4F178ED43E00967738 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 22498E22178ED43E00967738 /* Project object */;
+}
