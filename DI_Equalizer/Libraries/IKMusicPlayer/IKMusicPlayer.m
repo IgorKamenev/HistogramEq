@@ -13,6 +13,7 @@
 @property (nonatomic) FFTSetup fftSetup;
 @property (nonatomic, strong) NSString* soundItemPath;
 @property (nonatomic) int framesCount;
+@property (nonatomic) AudioComponentInstance toneUnit;
 
 @end
 
@@ -102,8 +103,13 @@ static ExtAudioFileRef sourceAudioFile;
     
     [self initFFT];
     
-    AudioUnitInitialize(toneUnit);
-    AudioOutputUnitStart(toneUnit);
+    AudioUnitInitialize(self.toneUnit);
+    AudioOutputUnitStart(self.toneUnit);
+}
+
+- (void) stop
+{
+    AudioOutputUnitStop(self.toneUnit);
 }
 
 - (void)createAudioUnit
@@ -121,14 +127,14 @@ static ExtAudioFileRef sourceAudioFile;
 	NSAssert(defaultOutput, @"Can't find default output");
 	
 	// Create a new unit based on this that we'll use for output
-	OSStatus err = AudioComponentInstanceNew(defaultOutput, &toneUnit);
-	NSAssert1(toneUnit, @"Error creating unit: %ld", err);
+	OSStatus err = AudioComponentInstanceNew(defaultOutput, &_toneUnit);
+	NSAssert1(self.toneUnit, @"Error creating unit: %ld", err);
 	
 	// Set our tone rendering function on the unit
 	AURenderCallbackStruct input;
 	input.inputProc = playbackCallback;
 	input.inputProcRefCon = (__bridge void *)(self);
-	err = AudioUnitSetProperty(toneUnit,
+	err = AudioUnitSetProperty(self.toneUnit,
                                kAudioUnitProperty_SetRenderCallback,
                                kAudioUnitScope_Input,
                                0,
@@ -136,7 +142,7 @@ static ExtAudioFileRef sourceAudioFile;
                                sizeof(input));
 	NSAssert1(err == noErr, @"Error setting callback: %ld", err);
     
-	err = AudioUnitSetProperty (toneUnit,
+	err = AudioUnitSetProperty (self.toneUnit,
                                 kAudioUnitProperty_StreamFormat,
                                 kAudioUnitScope_Input,
                                 0,
@@ -151,9 +157,20 @@ static OSStatus playbackCallback(void *inRefCon,
                                  UInt32 inNumberFrames,
                                  AudioBufferList *ioData) {
     
-    
     IKMusicPlayer* p = (__bridge IKMusicPlayer*) inRefCon;
 
+    AudioTimeStamp ts;
+    UInt32 size = sizeof(ts);
+    
+    OSStatus result = AudioUnitGetProperty([p toneUnit],
+                                           kAudioUnitProperty_CPULoad,
+                                           kAudioUnitScope_Output,
+                                           0,
+                                           &ts,
+                                           &size);
+    
+    printf("%f\n", ts.mSampleTime);
+    
     UInt32 framesRead = inNumberFrames * sizeof(SInt16);
     ExtAudioFileRead(sourceAudioFile, &framesRead, ioData );
 
@@ -228,8 +245,7 @@ static OSStatus playbackCallback(void *inRefCon,
         v = [self logBase:base value:(1 + v*(base-1))];
 
 // TODO:
-// на симуляторе буфер 512, на девайсе 4096 (иначе бывают фризы).
-// подебить FFT так и не удалось (из-за разного размера окна, FFT выдает разные попугаи... потом надо доделать)
+// Different frame count on simulator and device
         
 #if TARGET_IPHONE_SIMULATOR
         v *= 2;

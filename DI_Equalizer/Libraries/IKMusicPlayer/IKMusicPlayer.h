@@ -14,7 +14,6 @@
 
 @interface IKMusicPlayer : NSObject {
    
-    AudioComponentInstance toneUnit;
 
 }
 
@@ -23,6 +22,7 @@
 - (id) initWithPath: (NSString*) path;
 - (void) initPlayer;
 - (void) play;
+- (void) stop;
 
 //- (NSArray*) getFFTBarsWithBarsCount: (int) barsCount;
 - (float*) getFFTBarsWithBarsCount: (int) barsCount;

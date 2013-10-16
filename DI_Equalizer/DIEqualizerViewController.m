@@ -18,9 +18,8 @@
 @property (nonatomic, strong) NSTimer* timer;
 @property (nonatomic, strong) IKMusicPlayer* player;
 @property (nonatomic, strong) CADisplayLink* displayLink;
+@property (nonatomic) BOOL isPlaying;
 @end
-
-static int barsCount=40;
 
 @implementation DIEqualizerViewController
 
@@ -37,14 +36,19 @@ static int barsCount=40;
 {
     [super viewDidLoad];
     
-    self.eqView = [[IKGraphicEqualizerView alloc] initWithFrame:CGRectMake(0, 0, 80, 40)];
-    self.eqView.barsCount = barsCount;
+    self.eqView = [[IKGraphicEqualizerView alloc] initWithFrame:self.view.bounds];
+    self.eqView.barsCount = 80;
     self.eqView.minBarValue = 0;
     self.eqView.maxBarValue = 1;
+    self.eqView.barsLevelCount = 40;
     
+    UITapGestureRecognizer* tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapHandler)];
     
-    self.eqView.barsLevelCount = 10;
+    [self.eqView addGestureRecognizer:tapRecognizer];
+    self.eqView.userInteractionEnabled = YES;
+    
     [self.view addSubview:self.eqView];
+    self.eqView.backgroundColor = [UIColor redColor];
     
     self.player = [[IKMusicPlayer alloc] initWithPath:[[NSBundle mainBundle] pathForResource:@"test" ofType:@"mp3"]];
 
@@ -56,31 +60,37 @@ static int barsCount=40;
     
 }
 
+- (void) startPlayer
+{
+    NSLog(@"Start player");
+    [self.player play];
+    self.isPlaying = YES;
+}
+
+- (void) stopPlayer
+{
+    NSLog(@"Stop player");
+    [self.player stop];
+    self.isPlaying = NO;
+}
+
+- (void) tapHandler
+{
+    if (self.isPlaying)
+        [self stopPlayer];
+    else
+        [self startPlayer];
+}
+
 - (void) updateEQ
 {
 
     if (!self.player.isFFTDataValid) return;
 
-    float * fftValues = [self.player getFFTBarsWithBarsCount:barsCount];
-    [self.eqView setFFTValues:fftValues length:barsCount];
+    float * fftValues = [self.player getFFTBarsWithBarsCount:self.eqView.barsCount];
+    [self.eqView setFFTValues:fftValues length:self.eqView.barsCount];
 
-    free(fftValues);
-
-//   
-//    float *values = malloc(sizeof(float) * barsCount);
-//    
-//    for (int i=0; i < barsCount; i++) {
-//        
-//        values[i] = sin(v*M_PI + sin(i*M_PI_2/90.0))-0.3;
-//        //printf("%0.2f ", values[i]);
-//    }
-//    
-//    v += 0.03;
-//    
-//    [self.eqView setFFTValues:values length:barsCount];
-//    
-//    free(values);
-    
+    free(fftValues);    
 }
 
 @end
